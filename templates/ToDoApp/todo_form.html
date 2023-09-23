@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>{% if form.instance.pk %}Edit ToDo{% else %}Create ToDo{% endif %}</title>
+    <link rel="stylesheet" href="{% static 'ToDoApp/todo_form.css' %}">
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Edit ToDo{% else %}Create ToDo{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

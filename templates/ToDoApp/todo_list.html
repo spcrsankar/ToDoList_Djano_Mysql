@@ -1,0 +1,26 @@
+<!-- todoapp/templates/todoapp/todo_list.html -->
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="{% static 'ToDoApp/todo_list.css' %}">
+</head>
+<body>
+    <div class="top"> 
+      <h1>ToDo List</h1> 
+      <a id="logout" href="user_logout">logout</a> 
+    </div>
+    <ul>
+        {% for todo in todos %}
+        <li>
+            <p><b>{{ todo.title }}</b> - {{ todo.description }}</p>
+            <a href="{% url 'todo_update' todo.pk %}">Edit</a>
+            <a href="{% url 'todo_delete' todo.pk %}">Delete</a>
+          </li>
+        {% endfor %}
+    </ul>
+    <a id="new-todo" href="{% url 'todo_create' %}">Create New ToDo</a>
+</body>
+</html>

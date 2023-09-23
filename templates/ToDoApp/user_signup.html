@@ -1,0 +1,24 @@
+  
+
+{% extends 'ToDoApp/login_signup_base.html' %}
+
+{% block header %}
+<div class="login-signup">
+  <p ><a href="/user_login">Login</a></p>
+  <p class="focus"><a href="/user_signup">Signup</a></p>
+</div>
+{% endblock %}
+
+{% block main %}
+<main>
+  <form method="post" id="login-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if msg %}
+      <p class="msg">*{{msg}}</p>
+    {% endif %}
+    <button id="login">Login</button>
+  </form>
+</main>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore the virtual environment directory (assuming you're using virtualenv)
+venv/
+
+# Ignore Django migration files
+*.sqlite3
+*.db
+*.log
+
+# Ignore user-uploaded media files (if using the MEDIA_URL setting)
+media/
+
+# Ignore local settings (if you have a separate settings file for development)
+settings/local.py
+
+# Ignore sensitive information (e.g., secrets, API keys)
+secrets.json
+
+# Ignore IDE and text editor-specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore the Django static root directory (if defined)
+static_root/
+
+# Ignore database backups or dumps
+*.dump
+
+# Ignore compiled JavaScript and CSS files
+*.js
+*.css
+
+# Ignore generated or temporary files
+*.swp
+*.swo
+
+# Ignore any files or directories specific to your development environment
+~
