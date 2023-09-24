@@ -13,9 +13,18 @@
       <a id="logout" href="user_logout">logout</a> 
     </div>
     <ul>
+        <li class="table-top">
+          <b>Title</b>
+          <b>Description</b>
+          <b>Is Completed</b>
+          <b>Edit</b>
+          <b>Delete</b>
+        </li>
         {% for todo in todos %}
         <li>
-            <p><b>{{ todo.title }}</b> - {{ todo.description }}</p>
+            <p><b>{{ todo.title }}</b></p>
+            <p>{{ todo.description }}</p>
+            <b class="{{todo.status}}">{{ todo.status }}</b>
             <a href="{% url 'todo_update' todo.pk %}">Edit</a>
             <a href="{% url 'todo_delete' todo.pk %}">Delete</a>
           </li>
