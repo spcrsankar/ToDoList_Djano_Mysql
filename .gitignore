@@ -33,13 +33,4 @@ static_root/
 # Ignore database backups or dumps
 *.dump
 
-# Ignore compiled JavaScript and CSS files
-*.js
-*.css
 
-# Ignore generated or temporary files
-*.swp
-*.swo
-
-# Ignore any files or directories specific to your development environment
-~
